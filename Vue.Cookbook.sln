@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vue.Cookbook.Server", "Vue.Cookbook\Vue.Cookbook.Server.csproj", "{A0C91552-3685-4E39-AB15-4E91108AE460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0C91552-3685-4E39-AB15-4E91108AE460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C91552-3685-4E39-AB15-4E91108AE460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C91552-3685-4E39-AB15-4E91108AE460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C91552-3685-4E39-AB15-4E91108AE460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E29BDDFE-5AC6-4C05-9421-58A55E123A95}
+	EndGlobalSection
+EndGlobal
