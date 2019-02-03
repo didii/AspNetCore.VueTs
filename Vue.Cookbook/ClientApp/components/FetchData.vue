@@ -14,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in forecasts">
+                <tr v-for="item in forecasts" :key="item.summary">
                     <td>{{ item.dateFormatted }}</td>
                     <td>{{ item.temperatureC }}</td>
                     <td>{{ item.temperatureF }}</td>
@@ -27,4 +27,26 @@
     </div>
 </template>
 
-<script src="./fetchdata.ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+interface WeatherForecast {
+    dateFormatted: string;
+    temperatureC: number;
+    temperatureF: number;
+    summary: string;
+}
+
+@Component
+export default class FetchData extends Vue {
+    forecasts: WeatherForecast[] = [];
+
+    mounted() {
+        fetch('api/SampleData/WeatherForecasts')
+            .then(response => response.json() as Promise<WeatherForecast[]>)
+            .then(data => {
+                this.forecasts = data;
+            });
+    }
+}
+</script>

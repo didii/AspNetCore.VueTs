@@ -10,4 +10,16 @@
     </div>
 </template>
 
-<script src="./counter.ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Counter extends Vue {
+    currentcount: number = 0;
+
+    incrementCounter() {
+        this.currentcount++;
+    }
+
+}
+</script>
