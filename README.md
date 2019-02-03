@@ -20,5 +20,6 @@ Don't forget to also rename the folders and the name value in `package.json`.
 ## Thanks
 
 Big thanks to Victor Alberto Gil with his [upgrade blog](https://medium.com/@vhanla/creating-a-vuejs-with-typescript-spa-on-asp-net-core-2-1-5efaee226154) that got me most of the way there.
+His repo is [here](https://github.com/vhanla/vuets).
 
 This repo differs from his since I've upgraded to Asp.Net Core 2.2 and I setup single file components.
