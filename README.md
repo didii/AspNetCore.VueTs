@@ -6,6 +6,7 @@ This is a simple template for an Asp.Net Core backend using Vue as the frontend 
 * Vue.js 2.x with
   * TypeScript 3.x
   * Single file components
+  * Client-side routing
 
 It has as of 09/02/2019 all the latest packages:
 
@@ -16,6 +17,11 @@ It has as of 09/02/2019 all the latest packages:
 To use this template, simply clone it.
 Then do a find and replace all on `AspNetCore.VueTs` with the name you want this project to be.
 Don't forget to also rename the folders and the name value in `package.json`.
+
+**Note**: when you update packages yourself and somehow everything breaks, clean the project using `dotnet clean`.
+The `wwwroot/dist` folder is never regenerated and could be the culprit.
+There is an extra step added in the `.csproj`-file to also remove that folder per clean.
+The next build will trigger a first-time webpack setup which might be needed for package upgrades.
 
 ## Thanks
 
