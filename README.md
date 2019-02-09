@@ -7,7 +7,7 @@ This is a simple template for an Asp.Net Core backend using Vue as the frontend 
   * TypeScript 3.x
   * Single file components
 
-It has as of 04/02/2019 all the latest packages:
+It has as of 09/02/2019 all the latest packages:
 
 > ![npm-check result](npm-check.png)
 
