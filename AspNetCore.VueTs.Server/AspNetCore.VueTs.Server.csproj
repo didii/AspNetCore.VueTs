@@ -41,4 +41,8 @@
     </ItemGroup>
   </Target>
 
+  <Target Name="CleanWebpack" AfterTargets="Clean">
+    <RemoveDir Directories="wwwroot\dist" />
+  </Target>
+
 </Project>
