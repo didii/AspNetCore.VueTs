@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -13,7 +14,10 @@ module.exports = (env) => {
         mode: devMode,
         stats: { modules: false },
         context: __dirname,
-        resolve: { extensions: [ '.js', '.ts', '.vue' ] },
+        resolve: {
+            extensions: [ '.js', '.ts', '.vue' ],
+            plugins: [new TsConfigPathsPlugin()]
+        },
         entry: { 'main': './ClientApp/boot.ts' },
         module: {
             rules: [
