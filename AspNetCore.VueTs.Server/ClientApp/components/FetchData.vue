@@ -39,9 +39,9 @@ interface WeatherForecast {
 
 @Component
 export default class FetchData extends Vue {
-    forecasts: WeatherForecast[] = [];
+    private forecasts: WeatherForecast[] = [];
 
-    mounted() {
+    public mounted() {
         fetch('api/SampleData/WeatherForecasts')
             .then(response => response.json() as Promise<WeatherForecast[]>)
             .then(data => {
