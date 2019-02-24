@@ -30,6 +30,9 @@
                 <em>Back</em> to return here.
             </li>
             <li>
+                <strong>Vuex stores</strong>. The counters value is persisted in the store.
+            </li>
+            <li>
                 <strong>Webpack dev middleware</strong>. In development mode, there's no need to run the
                 <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.
             </li>
