@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
+import CounterModule from '@/stores/CounterModule';
 
 Vue.use(Vuex);
 
-export interface IAppState { }
-
-const options: StoreOptions<IAppState> = {
+const options: StoreOptions<{}> = {
     strict: process.env.NODE_ENV !== 'production',
+    modules: {
+        CounterModule,
+    }
 };
 
 export default new Vuex.Store(options);

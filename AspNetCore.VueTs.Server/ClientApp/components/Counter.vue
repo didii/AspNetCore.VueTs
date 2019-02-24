@@ -19,7 +19,7 @@ import CounterModule from '@/stores/CounterModule';
 
 @Component
 export default class Counter extends Vue {
-    private module = getModule(CounterModule);
+    private module = getModule(CounterModule, this.$store);
 
     private get currentcount(): number {
         return this.module.counter;

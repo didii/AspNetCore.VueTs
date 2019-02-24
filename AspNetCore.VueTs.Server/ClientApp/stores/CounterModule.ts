@@ -1,7 +1,6 @@
 import { Module, VuexModule, Mutation } from 'vuex-module-decorators';
-import store from '@/store';
 
-@Module({dynamic: true, store, name: 'countermodule'})
+@Module({name: 'CounterModule'})
 export default class CounterModule extends VuexModule {
     public counter: number = 0;
 
