@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore.VueTs.Controllers
+namespace AspNetCore.VueTs.Server.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller

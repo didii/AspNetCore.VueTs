@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCore.VueTs {
+namespace AspNetCore.VueTs.Server {
     public class Startup {
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
