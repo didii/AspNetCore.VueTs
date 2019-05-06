@@ -9,7 +9,7 @@ This is a simple template for an Asp.Net Core backend using Vue as the frontend 
   * Client-side routing
   * Vuex
 
-It has as of 24/02/2019 all the latest packages:
+It has as of 06/05/2019 all the latest packages:
 
 > ![npm-check result](npm-check.png)
 
