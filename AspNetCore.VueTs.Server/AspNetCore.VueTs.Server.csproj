@@ -42,6 +42,7 @@
   </Target>
 
   <Target Name="CleanWebpack" AfterTargets="Clean">
+    <Message Importance="low" Text="Purging wwwroot\dist" />
     <RemoveDir Directories="wwwroot\dist" />
   </Target>
 

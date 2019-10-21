@@ -6,12 +6,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     const extractCSS = new ExtractTextPlugin('vendor.css');
-    const devMode = isDevBuild ? 'development':'production';
+    const devMode = isDevBuild ? 'development' : 'production';
 
     return [{
         mode: devMode,
         stats: { modules: false },
-        resolve: { extensions: [ '.js' ] },
+        resolve: { extensions: ['.js'] },
         entry: {
             vendor: [
                 'bootstrap',
@@ -29,7 +29,7 @@ module.exports = (env) => {
                 { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' }
             ]
         },
-        output: { 
+        output: {
             path: path.join(__dirname, 'wwwroot', 'dist'),
             publicPath: 'dist/',
             filename: '[name].js',

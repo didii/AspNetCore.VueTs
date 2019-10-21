@@ -8,14 +8,15 @@ const bundleOutputDir = './wwwroot/dist';
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
-    const devMode = isDevBuild ? 'development':'production';
+    const devMode = isDevBuild ? 'development' : 'production';
 
     return [{
         mode: devMode,
+        devtool: devMode ? 'eval-source-map' : undefined,
         stats: { modules: false },
         context: __dirname,
         resolve: {
-            extensions: [ '.js', '.ts', '.vue' ],
+            extensions: ['.js', '.ts', '.vue'],
             plugins: [new TsConfigPathsPlugin()]
         },
         entry: { 'main': './ClientApp/boot.ts' },
@@ -23,7 +24,7 @@ module.exports = (env) => {
             rules: [
                 { test: /\.vue$/, include: /ClientApp/, loader: 'vue-loader' },
                 { test: /\.tsx?$/, include: /ClientApp/, loader: 'ts-loader', options: { appendTsSuffixTo: [/\.vue$/] } },
-                { test: /\.css$/, use: isDevBuild ? [ 'vue-style-loader', 'css-loader' ] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
+                { test: /\.css$/, use: isDevBuild ? ['vue-style-loader', 'css-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         },
